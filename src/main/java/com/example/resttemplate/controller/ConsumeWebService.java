@@ -28,8 +28,6 @@ public class ConsumeWebService {
 		return service.getPageUserList(page);
 	}
 	
-	// Esse GET está dando erro
-	// Anotação para lembrar de arrumar
 	@GetMapping("/singleusers/{id}")
 	public SingleUserDTO getSingleUser(@PathVariable Integer id) {
 		return service.getSingleUser(id);

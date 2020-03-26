@@ -38,9 +38,9 @@ public class PageServiceImpl implements PageService {
 		UriComponents uri = UriComponentsBuilder.fromHttpUrl(url)
 				.build();
 		
-		Page pag = restTemplate.getForObject(uri.toUriString() + "/{id}", Page.class, id);
+		SingleUserDTO singleUser = restTemplate.getForObject(uri.toUriString() + "/{id}", SingleUserDTO.class, id);
 		
-		return new SingleUserDTO(pag);
+		return singleUser;
 	}
 
 	@Override
